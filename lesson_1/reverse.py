@@ -5,7 +5,7 @@
 
 def reverse(string):
     # change the code below
-    return "hi"
+    return string[::-1]
 
 
 # These are tests to check that your code is working. After writing

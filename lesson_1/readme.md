@@ -6,6 +6,9 @@ Run the script in the terminal
 `python SCRIPTNAME.py`
 and see if everything returns true!
 
+ex.
+![terminal_image](http://dropshare.jinpark.net/dropshare/pb-UnwYDKlRnb-Zg2.png)
+
 # Order:
 1. `reverse.py`
 2. `common_letter.py`
