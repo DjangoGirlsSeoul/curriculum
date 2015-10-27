@@ -32,8 +32,8 @@ If we have a company structured like this:
 
 then we should have bonuses like this:
 
-```ruby
-rachell.bonus(5) # => 500_000
-jin.bonus(4) # => 88_000
-sujin.bonus(3) # => 30_000
+```python
+rachell.bonus(5) == 500000
+jin.bonus(4) == 88000
+sujin.bonus(3) == 30000
 ```
