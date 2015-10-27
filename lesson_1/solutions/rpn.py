@@ -51,11 +51,14 @@ operators = {'+': operator.add,
 def rpn(input):
     input_list = input.split()
     stack = []
-    while input_list:
-        if input_list[0].isnumeric():
-            stack.append(input_list.pop(0))
-        elif input_list[0] in operators:
-            stack.append(operators[input_list.pop(0)](float(stack.pop(-2)), float(stack.pop(-1))))
+    for value in input_list:
+        if value.isnumeric():
+            stack.append(value)
+        elif value in operators:
+            second = float(stack.pop())
+            first = float(stack.pop())
+            op = operators[value]
+            stack.append(op(first, second))
         else:
             return "Invalid input"
     return stack.pop()
