@@ -40,5 +40,5 @@ Students:
 
 Slack: https://djangogirlsseoul.slack.com/ 
 
-CodeCademy: http://codecademy.com/tracks/python and codecademy.com/tracks/python-ko
+CodeCademy: http://codecademy.com/tracks/python and http://codecademy.com/tracks/python-ko
 
