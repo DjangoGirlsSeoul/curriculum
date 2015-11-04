@@ -9,12 +9,13 @@ Requirements:
 | Time  | Content |
 | ------------- | ------------- |
 | 1:10-1:20  | Talk about code camp and self study groups (Rachell/DY)  |
-| 1:20-1:30  | Talk about todays exercises (Jin)  |
-| 1:30-2:00  | Code Along with Rachell!  |
-| 2:00-3:00  | Codecademy  |
-| 3:00-3:20  | Tea/Coffee time  |
-| 3:20-3:30  | Talk about past learning experiences (Sujin)  |
-| 3:30-5:45  | Exercises  |
+| 1:20-1:50  | Code Along with Rachell!  |
+| 1:50-2:00  | Talk about todays exercises (Jin)  |
+| 2:00-2:30  | Talk about todays exercises (Jin)  |
+| 2:30-4:00  | Codecademy  |
+| 4:00-4:15  | Tea/Coffee time  |
+| 4:15-4:30  | Talk about past learning experiences (Sujin)  |
+| 4:30-5:45  | Exercises  |
 | 5:45  | Finish up and closing remarks  |
 
 Students:
