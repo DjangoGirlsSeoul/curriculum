@@ -15,19 +15,19 @@
 
 #not checking errors:
 
-# hrs = input("Enter Hours:")
-# pay = input("Enter Pay: ")
-# hrs = float(hrs)
-# pay = float(pay)
-# if hrs <= 40:
-# 	gross_pay = hrs*pay
-# if hrs > 40:
-# 	regular_pay = 40 * pay
-# 	overtime_hours = hrs - 40
-# 	overtime_pay = pay * 1.5
-# 	overtime = overtime_hours * overtime_pay
-# 	gross_pay = regular_pay + overtime
-# print(gross_pay)
+hrs = input("Enter Hours:")
+pay = input("Enter Pay: ")
+hrs = float(hrs)
+pay = float(pay)
+if hrs <= 40:
+	gross_pay = hrs*pay
+if hrs > 40:
+	regular_pay = 40 * pay
+	overtime_hours = hrs - 40
+	overtime_pay = pay * 1.5
+	overtime = overtime_hours * overtime_pay
+	gross_pay = regular_pay + overtime
+print(gross_pay)
 
 
 
@@ -35,23 +35,23 @@
 
 hrs = input("Enter Hours:")
 
-if hrs.isdigit():
-	pay = input("Enter Pay: ")
-	numpay = pay.split(".")
-	paystring = "".join(numpay)
-	if paystring.isdigit():
-		hrs = float(hrs)
-		pay = float(pay)
-		if hrs <= 40:
-			gross_pay = hrs*pay
-		if hrs > 40:
-			regular_pay = 40 * pay
-			overtime_hours = hrs - 40
-			overtime_pay = pay * 1.5
-			overtime = overtime_hours * overtime_pay
-			gross_pay = regular_pay + overtime
-		print(gross_pay)
-	else:
-		print("Pay entered isn't a valid number.")
-else:
-	print("Hours entered isn't a valid number.")
+# if hrs.isdigit():
+# 	pay = input("Enter Pay: ")
+# 	numpay = pay.split(".")
+# 	paystring = "".join(numpay)
+# 	if paystring.isdigit():
+# 		hrs = float(hrs)
+# 		pay = float(pay)
+# 		if hrs <= 40:
+# 			gross_pay = hrs*pay
+# 		if hrs > 40:
+# 			regular_pay = 40 * pay
+# 			overtime_hours = hrs - 40
+# 			overtime_pay = pay * 1.5
+# 			overtime = overtime_hours * overtime_pay
+# 			gross_pay = regular_pay + overtime
+# 		print(gross_pay)
+# 	else:
+# 		print("Pay entered isn't a valid number.")
+# else:
+# 	print("Hours entered isn't a valid number.")
