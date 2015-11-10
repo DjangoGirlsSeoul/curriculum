@@ -10,7 +10,19 @@
 # 난이도: 상
 
 def num_repeats(string):
-    return "hi"
+	common = dict()
+	letters = list()
+	for letter in string:
+	    letters.append(letter)
+	for x in letters:
+		common[x] = common.get(x,0) + 1
+	count = 0
+	for key,val in common.items():
+	    if val > 1:
+	        count += 1
+
+
+	return count
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.

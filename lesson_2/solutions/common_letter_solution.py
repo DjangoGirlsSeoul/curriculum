@@ -7,13 +7,28 @@
 # 난이도: 중
 
 def most_common_letter(string):
-    return "hi"
+	common = dict()
+	letters = list()
+	for letter in string:
+	    letters.append(letter)
+	for x in letters:
+		common[x] = common.get(x,0) + 1
+
+	maxkey = 0
+	maxval = 0
+	for key,val in common.items():
+	    if val > maxval:
+	        maxkey = key
+	        maxval = val
+
+	return [maxkey, maxval]
+
+
 
 
 
 # These are tests to check that your code is working. After writing
 # your solution, they should all print true.
-# 아래는 코드가 잘 작동되는지 확인하는테스트 입니다. solution을 입력한 뒤에는 모두 true가 나와야 합니다.
 
 print('most_common_letter("abca") == ["a", 2]: ' + str(most_common_letter('abca') == ['a', 2]))
 
