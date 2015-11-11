@@ -23,8 +23,8 @@ Students:
 
 1. Exercises
 
-    - `word_chain.md`
     - `employee.md`
+    - `word_chain.md`
 
 2. Homework:
 
