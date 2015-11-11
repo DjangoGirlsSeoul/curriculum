@@ -1,7 +1,8 @@
 # Write a function that takes in a string and returns a new
-# 문자열 결과값을 가져오는 함수를 만드세요.
 # string with the letters in reverse order. Assume that the input will always be strings.
 # 내림차순 순서로 문자가 정렬되어야 합니다. input은 항상 스트링 입니다.
+# 문자열 결과값을 가져오는 함수를 만드세요.
+
 # Difficulty: easy.
 # 난이도쉬움
 def reverse(string):
