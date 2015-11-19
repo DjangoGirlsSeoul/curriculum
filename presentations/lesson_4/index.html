@@ -33,6 +33,9 @@
             .yellow {
                 color: yellow;
             }
+            code {
+                color: orange;
+            }
         </style>
     </head>
 
@@ -46,6 +49,7 @@
                     <h1>Django Girls Code Camp </h1>
                     <h3>Lesson 4</h3>
                     <small>Django Part 1</small>
+                    <h2 style="text-transform: lowercase;">j.mp/dgcc-3</h2>
                 </section>
 
                 <section data-background="images/overview.jpg">
@@ -138,10 +142,10 @@
 
                 <section data-background="images/python-programming.jpg">
                     <h2>Updates!</h2>
-                    <ol>
+                    <ul>
                         <li>Reference the Django Girls Tutorial for help</li>
                         <li><a href="http://tutorial.djangogirls.org">Link here</a></li>
-                    </ol>
+                    </ul>
                 </section>
 
                 <section data-background="images/pair.jpg">
@@ -150,8 +154,93 @@
 
                 <section data-background="images/blackpython.png">
                     <h2>DiningKode</h2>
-                    <a href="https://github.com/djangogirlscodecamp/diningkode">Github Repo</a>
-                    
+                    <ul>
+                        <li><a href="https://github.com/djangogirlscodecamp/diningkode">Github Repo</a></li>
+                        <li><a href="https://github.com/djangogirlscodecamp/diningkode/archive/master.zip">Download</a></li>
+                    </ul>
+                </section>
+
+                <section data-background="images/blackpython.png">
+                    <h2>DiningKode</h2>
+                    <h3>Setup</h3>
+                    <ul>
+                        <li>Create a new folder <code>djangogirlscodecamp</code></li>
+                        <li><code>cd djangogirlscodecamp</code></li>
+                        <li>Download and unzip <a href="https://github.com/djangogirlscodecamp/diningkode/archive/master.zip">starter app</a></li>
+                        <li><code>C:\Python34\python -m venv diningkodevenv</code></li>
+                        <li><code>diningkodeenv\Scripts\activate</code></li>
+                        <li><code>cd diningkode</code></li>
+                        <li><code>pip install -r requirements.txt</code></li>
+                    </ul>
+                    <h2>Help your fellow classmates!</h2>
+                </section>
+
+                <section data-background="images/blackpython.png">
+                    <h2>DiningKode</h2>
+                    <h3>Part 1</h3>
+                    <ul>
+                        <li>Open project in atom</li>
+                        <li>Open up <code>views.py</code></li>
+                        <li>Try finishing the two functions <code>find_restaurant_by_name</code> and <code>filter_restaurants_by_rating</code></li>
+                    </ul>
+                    <h3>Call a coach over to verify</h3>
+                </section>
+
+                <section data-background="images/blackpython.png">
+                    <h2>DiningKode</h2>
+                    <h3>Part 2</h3>
+                    <ul>
+                        <li>Run the django server by <code>python manage.py runserver</code></li>
+                        <li>Go to <code>localhost:8000</code> and see a list of restaurants</li>
+                        <li>What happened?</li>
+                    </ul>
+                    <h3>Ask questions!</h3>
+                </section>
+
+                <section data-background="images/blackpython.png">
+                    <h2>DiningKode</h2>
+                    <h3>Part 2.5</h3>
+                    <ul>
+                        <li>The view function <code>list</code> sent the dictionary <code>{"restaurants": restaurants}</code> to the template located at <code>'restaurants/list.html'</code></li>
+                        <li>In Django you can enter django/python variables in <code>{{ }}</code> and they will show up!</li>
+                        <li>You can do <code>for</code> loops by using <code>{% for resto in restaurants %} {% endfor %}</code></li>
+                    </ul>
+                    <h3>Ask questions!</h3>
+                </section>
+
+                <section data-background="images/blackpython.png">
+                    <h2>DiningKode</h2>
+                    <h3>Part 3 - Detail View</h3>
+                    <ul>
+                        <li>Lets make the detail view</li>
+                        <li>Using the <code>find_restaurant_by_name</code> function we wrote before lets write the view function</li>
+                        <li>If we use <code>find_restaurant_by_name</code> we can create the dictionary to pass to the template</li>
+                    </ul>
+                    <h3>Ask questions!</h3>
+                </section>
+
+                <section data-background="images/blackpython.png">
+                    <h2>DiningKode</h2>
+                    <h3>Part 3.5 - Detail Template</h3>
+                    <ul>
+                        <li>Lets make the detail template</li>
+                        <li>If we put <code>{{ restaurant.name }}</code> in the template, what do we see?</li>
+                        <li>Lets put in the rating, price, phone number and review as well</li>
+                    </ul>
+                    <h3>Ask questions!</h3>
+                </section>
+
+                <section data-background="images/blackpython.png">
+                    <h2>DiningKode</h2>
+                    <h3>Part 4 - Rating</h3>
+                    <ul>
+                        <li>Lets make the ratings page</li>
+                        <li>Lets show all restaurants that have a rating over 4 </li>
+                        <li>We can use our <code>filter_restaurants_by_rating</code> function we wrote before!</li>
+                        <li>Use what you learned from the detail view to write the rating page</li>
+                        <li>We already have a template ready at <code>'restaurants/detail.html'</code></li>
+                    </ul>
+                    <h3>Ask questions!</h3>
                 </section>
 
                 <section data-background="images/python.png">
