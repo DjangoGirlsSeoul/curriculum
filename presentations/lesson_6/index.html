@@ -159,134 +159,107 @@
                 </section>
 
                 <section data-background="images/blackpython.png">
-                    <h2>DiningKode Models</h2>
+                    <h2>DiningKode Html-CSS</h2>
                     <ul>   
-                        <li>For NEW students</li>
-                        <li><a href="https://github.com/djangogirlscodecamp/diningkode/tree/models">Github Repo</a></li>
-                        <li><a href="https://github.com/djangogirlscodecamp/diningkode/archive/models.zip">Download</a></li>
+                        <li>For ALL students</li>
+                        <li><a href="https://github.com/djangogirlscodecamp/diningkode/tree/html-css">Github Repo</a></li>
+                        <li><a href="https://github.com/djangogirlscodecamp/diningkode/archive/html-css.zip">Download</a></li>
                     </ul>
                 </section>
 
                 <section data-background="images/blackpython.png">
-                    <h2>DiningKode Models</h2>
-                    <h3>Setup</h3>
+                    <h2>DiningKode </h2>
+                    <h3>Setup/과제:</h3>
                     <ul>
-                        <li>Go to the <code>djangogirlscodecamp</code> folder</li>
-                        <li><code>cd djangogirlscodecamp</code></li>
-                        <li><code>C:\Python34\python -m venv diningkodevenv</code></li>
-                        <li><code>diningkodevenv\Scripts\activate</code></li>
-                        <li><code>cd diningkode</code></li>
+                        <li>dinkinkode-html-css (파일)을 다운로드 받으세요.</li>
+                        <li>Go to the <code>dinkinkode-html-css</code> folder</li>
+                        <li><code>cd dinkinkode-html-css</code> </li>
+                        <li><code>C:\Python34\python -m venv diningvenv</code> 가상환경을 만드세요.</li>
+                        <li>Mac : <code>python3-m venv diningvenv </code></li>
+                        <li>Activate (windows) 가상 환경 소스인  <code>diningvenv\Scripts\activate</code> 를 활성화 시키세요. </li>
+                        <li>Activate (Mac) <code>source diningvenv/bin/activate</code></li>
                     </ul>
                     <h2>Help your fellow classmates!</h2>
                 </section>
 
                 <section data-background="images/blackpython.png">
-                    <h2>DiningKode Models</h2>
-                    <h4>Part 1</h4>
+                    <h2>DiningKode Html-CSS</h2>
+                    <h4>Setup/과제:</h4>
                     <ul>
+                        <li><code>pip install -r requirements.txt</code> 을 눌러서 requirements를 설치하세요. </li>
+                        <li>우선 <code>python manage.py migrate</code> 를 입력해서 migrations를 작동시킵니다. </li>
+                        <li><code>python manage.py createsuperuser</code>을 입력해서 super user을 생성합니다. </li>
+                        <li>admin interface localhost 로부터 자료(data)를 일부 추가합니다.</li>
                         <li>Open project in atom</li>
-                        <li>Open up <code>models.py</code> and finish up the models by adding in price, rating and image</li>
-                        <pre><code class="python">
-class Restaurant(models.Model):
-    name = models.CharField(max_length=200)
-    address = models.TextField()
-    phone_number = models.CharField(max_length=20)
-    ...
-                        </code></pre>
-                        <li>price should be a <code>charfield</code></li>
-                        <li>rating should be a <code>floatfield</code></li>
-                        <li>image should be a <code>charfield</code></li>
-                        <li><a href="https://docs.djangoproject.com/en/1.8/ref/models/fields/#field-types">List of valid field types</a></li>
+                        <li>Open up <code>index.html</code> and see the html</li>
                     </ul>
                     <h3>Call a coach over to verify</h3>
                 </section>
 
                 <section data-background="images/blackpython.png">
-                    <h2>DiningKode Models</h2>
-                    <h3>Part 2</h3>
+                    <h2>DiningKode Html-CSS</h2>
+                    <h3>Part 1 - DEMO</h3>
                     <ul>
-                        <li>Before we had <code>restaurants</code> as a dictionary</li>
-                        <li>Now we can add it through models!</li>
-                        <li>Comment out the restaurants dictionary first.</li>
-                        <li>Since <code>restaurants = Restaurants.objects.all()</code> returns all restaurants</li>
-                        <li>Use this to rewrite <code>def list(request):</code></li>
+                        <li>Nav Bar</li>
+                        <li>Card View!</li>
+                        <li>Boostrap Nav Bar</li>
+                        <li>Boostrap Custom CSS</li>
+                        <li>BooStrap Grid View</li>
                     </ul>
                     <h3>Ask questions!</h3>
                 </section>
 
                 <section data-background="images/blackpython.png">
-                    <h2>DiningKode</h2>
-                    <h3>Part 3</h3>
+                    <h2>DiningKode Html-CSS</h2>
+                    <h3>Part 2 : TODO/할 일 </h3>
                     <ul>
-                        <li>Lets test!</li>
-                        <li>In the terminal, run <code>python manage.py runserver</code></li>
-                        <li>Go to <code>localhost:8000</code></li>
-                        <li>No restaurants!</li>
+                        <li>창의력을 발휘하세요!</li>
+                        <li><code>restaurants/templates/restaurants/index.html</code> 에 h1추가하세요(스타일에 css를 추가하세요). </li>
+                        <li><code>restaurants/static/restaurants/css/style.css</code> 에 <strong>p</strong>나 <strong>a </strong>요소의 스타일에 css를 추가하세요. </li>
+                        <li>restaurants/templates/restaurants/detail.html 를 여러분만의 방식으로 디자인해 보세요! http://www.diningcode.com/에서 예시를 한 번 보세요. </li>
+                        <li>색깔이나 글자체, 사이즈를 변경하면서 가지고 놀아 보세요. - <br>한글 글자체를 추가하고 싶다면 여기를 참고하세요. <a href="https://www.google.com/fonts/earlyaccess">site</a></li>
                     </ul>
                     <h3>Ask questions!</h3>
                 </section>
 
                 <section data-background="images/blackpython.png">
-                    <h2>DiningKode</h2>
-                    <h3>Part 3.25 - Superuser!</h3>
+                    <h2>DiningKode HTML-CSS</h2>
+                    <h3>Part 3 : TODO/할 일</h3>
                     <ul>
-                        <li>Go to the terminal</li>
-                        <li><code>python manage.py createsuperuser</code></li>
-                        <li>Now you're a super user!</li>
+                        <li>부트스트랩 템플릿, index_b.html , list_b.html , detail_b.html, 그리고 rating_b.html 를 확인하세요. </li>
+                        <li>부트스트랩을 이용해서 restaurants/templates/restaurants/rating_b.html 과 restaurants/templates/restaurants/detail_b.html using bootstrap 을 디자인하세요. </li>
                     </ul>
                     <h3>Ask questions!</h3>
                 </section>
 
                 <section data-background="images/blackpython.png">
-                    <h2>DiningKode</h2>
-                    <h3>Part 3.5 - Admin!</h3>
+                    <h2>DiningKode HTML-CSS</h2>
+                    <h3>Some Sample 1</h3>
                     <ul>
-                        <li>Go to the terminal</li>
-                        <li>In the terminal, run <code>python manage.py runserver</code></li>
-                        <li>Go to <code>localhost:8000/admin</code> and log in</li>
-                        <li>:( no restaurants!</li>
+                        <li><img src="https://www.dropbox.com/s/eyb61hx8ya4rmmf/screen_shot_1.png?raw=1" width="800px"></li>
+                        <li><a href="www.">Yogiyo</a></li>
                     </ul>
-                    <h3>Ask questions!</h3>
                 </section>
 
                 <section data-background="images/blackpython.png">
                     <h2>DiningKode</h2>
-                    <h3>Part 3.75 - Admin!</h3>
+                    <h3>Sample 2</h3>
                     <ul>
-                        <li>Go to <code>admin.py</code></li>
-                        <li>Add <code>admin.site.register(Restaurant)</code> to the bottom</li>
-                        <li>Go to <code>localhost:8000/admin</code> and log in</li>
-                        <li>Add some restaurants!</li>
-                        <li>Go to <code>localhost:8000</code> and see if it works!</li>
+                        <li><img src="https://www.dropbox.com/s/34op0x6whohnju3/%20screen_shot_2.png?raw=1" width="800"></li>
                     </ul>
                     <h3>Check with a coach before you continue!</h3>
                 </section>
 
-                <section data-background="images/blackpython.png">
-                    <h2>DiningKode</h2>
-                    <h3>Part 4 - Detail Page</h3>
-                    <ul>
-                        <li>Lets use <code>get</code> to find a restaurant by name</li>
-                        <li>Now lets use django models.</li>
-                        <li><code>Restaurant.objects.get(FIELD=VALUE)</code></li>
-                        <li>ex. <code>Restaurant.objects.get(name="mcdonalds")</code></li>
-                        <li>returns a SINGLE restaurant where that object has that value</li>
-                        <li>Use this for the detail page</li>
-                        <li>https://docs.djangoproject.com/en/1.8/topics/db/queries/#retrieving-a-single-object-with-get</li>
-                    </ul>
-                    <h3>Ask questions!</h3>
-                </section>
 
                 <section data-background="images/blackpython.png">
-                    <h2>DiningKode</h2>
-                    <h3>Part 5 - Rating</h3>
+                    <h2>DiningKode HTML-CSS</h2>
+                    <h3>References</h3>
                     <ul>
-                        <li>Lets use <code>filter</code> to find restaurants by ratings</li>
-                        <li><code>Restaurant.objects.filter(FIELD=VALUE)</code></li>
-                        <li>returns multiple restaurants where that object has that value</li>
-                        <li>We can also use <code>FIELD__gte</code> and <code>FIELD__lte</code> for greater than or less than or equal to</li>
-                        <li>Use this for the ratings page</li>
-                        <li>https://docs.djangoproject.com/en/1.8/topics/db/queries/#retrieving-specific-objects-with-filters</li>
+                        <li>생활코딩 CSS https://opentutorials.org/course/4</li>
+                        <li>생활코딩 HTML https://opentutorials.org/course/3</li>
+                        <li><a href="https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes">Flex Box</a> and <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"> CSS-Tricks</a></li>
+                        <li><a href="http://css-snippets.com/simple-horizontal-navigation/">Navigation Navbar</a> </li>
+                        <li><a href="http://getbootstrap.com/getting-started/">Boostrap</a></li>
                     </ul>
                     <h3>Ask questions!</h3>
                 </section>
