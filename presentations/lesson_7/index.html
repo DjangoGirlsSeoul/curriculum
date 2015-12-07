@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Django Girls Code Camp Lesson 3</title>
+
+        <meta name="description" content="Django Girls Code Camp Lesson 3">
+        <meta name="author" content="Django Girls Code Camp">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.1.0/css/reveal.min.css">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.1.0/css/theme/league.min.css" id="theme">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.1.0/lib/css/zenburn.min.css">
+        <link rel="stylesheet" href="css/twemoji-awesome.css">
+
+
+        <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <![endif]-->
+
+        <style>
+            section {
+                background: rgba(0,0,0,0.8);
+            }
+            .yellow {
+                color: yellow;
+            }
+            code:not(.python) {
+                color: orange;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section data-background="images/event.png">
+                    <h1>Django Girls Code Camp </h1>
+                    <h3>Lesson 7</h3>
+                    <small>Django Part 3</small>
+                    <h2 style="text-transform: lowercase;">j.mp/dgcc-7</h2>
+                </section>
+
+                <section data-background="images/overview.jpg">
+                <h2>Overview</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Week</th>
+                                <th>Topic</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td >1</td>
+                                <td >Python Part 1</td>
+                            </tr><tr>
+                            </tr><tr>
+                                <td>2</td>
+                                <td>Python Part 2</td>
+                            </tr><tr>
+                            </tr><tr>
+                                <td>3</td>
+                                <td>Python Part 3</td>
+                            </tr><tr>
+                            </tr><tr>
+                                <td>4</td>
+                                <td>Django Part 1</td>
+                            </tr><tr>
+                            </tr><tr>
+                                <td >5</td>
+                                <td>Django Part 2</td>
+                            </tr><tr>
+                            </tr><tr>
+                                <td>6</td>
+                                <td>HTML/CSS and GitHub</td>
+                            </tr><tr>
+                            </tr><tr>
+                                <td class="yellow">7</td>
+                                <td class="yellow">Django Part 3</td>
+                            </tr><tr>
+                            </tr><tr>
+                                <td>8</td>
+                                <td>Django Part 4</td>
+                            </tr><tr>
+                        </tr></tbody>
+                    </table>
+                </section>
+
+                <section data-background="images/notebook.jpg">
+                    <h2>Today's Schedule</h2>
+                    <table class="tg">
+                      <tr>
+                        <th class="tg-yw4l">Time</th>
+                        <th class="tg-yw4l">Content</th>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">1:10-1:30</td>
+                        <td class="tg-yw4l">Overview of the day and announcements</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">1:30-3:45</td>
+                        <td class="tg-yw4l">Urls -> Views</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">3:45-4:00</td>
+                        <td class="tg-yw4l">Break Time</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">4:00-4:15</td>
+                        <td class="tg-yw4l">Talk (Jihye) </td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">4:15-5:45</td>
+                        <td class="tg-yw4l">Related Models</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">5:45</td>
+                        <td class="tg-yw4l">Closing remarks</td>
+                      </tr>
+                    </table>
+                </section>
+
+                <section data-background="images/python-programming.jpg">
+                    <h2>Updates!</h2>
+                    <ul>
+                        <li>Reference the Django Girls Tutorial for help</li>
+                        <li><a href="http://tutorial.djangogirls.org">Link here</a></li>
+                        <li><a href="https://docs.djangoproject.com/en/1.8/topics/http/urls/">Django URL Documentation</a></li>
+                        <li><a href="https://docs.djangoproject.com/en/1.9/topics/db/models/#relationships">Relationships and Models</a></li>
+                    </ul>
+                </section>
+
+                <section data-background="images/pair.jpg">
+                    <h2>Intro to URLS in Django</h2>
+                    <pre><code class="python" data-lang="python" data-trim data-noescape>from django.conf.urls import url
+from . import views
+
+urlpatterns = [
+    url(r'^articles/2003/$', views.special_case_2003),
+    url(r'^articles/(?P<year>[0-9]{4})/$', views.year_archive),
+    url(r'^articles/(?P<year>[0-9]{4})/(?P<month>[0-9]{2})/$', views.month_archive),
+    url(r'^articles/(?P<year>[0-9]{4})/(?P<month>[0-9]{2})/(?P<day>[0-9]{2})/$', views.article_detail),
+]</code></pre>
+                    <ul>
+                        <li>Which one does <code>/articles/2005/03/</code> match?</li>
+                        <li>Which one does <code>/articles/2003/</code> match?</li>
+                        <li>Which one does <code>/articles/2003/03/03/</code> match?</li>
+                        <li>Which one does <code>/articles/2003/0303/</code> match?</li>
+                        
+                    </ul>
+                </section>
+
+
+                <section data-background="images/blackpython.png">
+                    <h2>DiningKode URLs</h2>
+                    <h3>Setup/과제:</h3>
+                    <ul>
+                        <li>dinkinkode-html-css (파일)을 다운로드 받으세요.</li>
+                        <li>Go (<code>cd</code>) to the <code>diningkode</code> folder</li>
+                        <li>Activate (windows) 가상 환경 소스인  <code>diningvenv\Scripts\activate</code> 를 활성화 시키세요. </li>
+                        <li>Activate (Mac) <code>source diningvenv/bin/activate</code></li>
+                    </ul>
+                    <h2>Help your fellow classmates!</h2>
+                </section>
+
+                <section data-background="images/blackpython.png">
+                    <h2>DiningKode URLs</h2>
+                    <h3>Part 1: Create New View </h3>
+                    <ul>
+                        <li>Create new function <code>price</code> in <code>views.py</code></li>
+                        <li>ex. <code>def price(request, max_price):</code> where <code>max_price</code> is either <code>$</code>, <code>$$</code> or <code>$$$</code></li>
+                        <li>Create a variable <code>restaurants</code> where it filters <code>Restaurant</code> to get restaurants that have prices less than or equal to <code>max_price</code></li>
+                        <li><code>Render</code> to <code>price.html</code></li>
+
+                    </ul>
+                    <h3>Ask questions!</h3>
+                </section>
+
+                <section data-background="images/blackpython.png">
+                    <h2>DiningKode URLs</h2>
+                    <h3>Part 2 : Template</h3>
+                    <ul>
+                        <li>Create a template <code>price.html</code></li>
+                        <li>Look at <code>rating.html</code> for examples.</li>
+                    </ul>
+                    <h3>Ask questions!</h3>
+                </section>
+
+                <section data-background="images/blackpython.png">
+                    <h2>DiningKode URLs</h2>
+                    <h3>Part 3: URLs</h3>
+                    <ul>
+                        <li>Add a new url to match <code>price/$$$/</code> and send the request to <code>views.price</code></li>
+                    </ul>
+                </section>
+
+                <section data-background="images/blackpython.png">
+                    <h2>DiningKode URLs</h2>
+                    <h3>Part 4: Test</h3>
+                    <ul>
+                        <li>Test and see if it works!</li>
+                    </ul>
+                    <h3>Check with a coach before you continue!</h3>
+                </section>
+
+                <section data-background="images/blackpython.png">
+                    <h2>DiningKode Related Models</h2>
+                    <h3>Part 1: New Models</h3>
+                    <ul>
+                        <li>Create a new model <code>Review</code></li>
+                        <pre><code>from django.contrib.auth.models import User
+
+class Review(models.Model):
+    author = models.ForeignKey(User)
+    review_text = models.TextField()
+    rating = models.FloatField()
+    restaurant = models.ForeignKey('Restaurant',null=True)
+    
+    def __str__(self):
+        return u"{}-{}".format(self.author.username, self.restaurant.name)</code></pre>
+                        <li><code>ForeignKey</code>?</li>
+                        <li>Add to admin</li>
+                        <pre><code>from .models import Restaurant, Review
+admin.site.register(Review)</code></pre>
+                    </ul>
+                    <h3>Check with a coach before you continue!</h3>
+                </section>
+
+                <section data-background="images/blackpython.png">
+                    <h2>DiningKode Related Models</h2>
+                    <h3>Part 2: Add to Template</h3>
+                    <ul>
+                        <li>Now our <code>Restaurant</code> has <code>Review</code>s!</li>
+                        <li>You can access <code>Review</code>s that are linked to a <code>Restaurant</code> by <code>restaurant.review</code></li>
+                        <li>In the <code>detail.html</code> template, add <code>restaurant.reviews</code> in a <code>{% for review in restaurant.reviews %}</code> loop</li>
+                    </ul>
+                    <h3>Ask questions!</h3>
+                </section>
+
+                <section data-background="images/blackpython.png">
+                    <h2>DiningKode Related Models</h2>
+                    <h3>Part 3: Test</h3>
+                    <ul>
+                        <li>Check in <code>localhost:8000</code> to see if your reviews are visible.</li>
+                        <li>Create a new <code>url</code> and <code>view</code> for filtering on both price and rating</li>
+                    </ul>
+                    <h3>Ask questions!</h3>
+                </section>
+
+
+                <section data-background="images/python.png">
+                    <h1> Goals </h1>
+                    <ul>
+                        <ol>Have fun!</ol>
+                        <ol>Code along!</ol>
+                        <ol>Find people nearby that you can meet up with during the week</ol>
+                        <ol>ASK QUESTIONS!</ol>
+                    </ul>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="https://cdn.bootcss.com/reveal.js/3.1.0/lib/js/head.min.js"></script>
+        <script src="https://cdn.bootcss.com/reveal.js/3.1.0/js/reveal.min.js"></script>
+
+        <script>
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                transition: 'fade', // none/fade/slide/convex/concave/zoom
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'https://cdn.bootcss.com/reveal.js/3.1.0/lib/js/classList.min.js', condition: function() { return !document.body.classList; } },
+                    { src: 'https://cdn.bootcss.com/reveal.js/3.1.0/plugin/highlight/highlight.min.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+                ]
+            });
+        </script>
+
+    </body>
+</html>
