@@ -181,9 +181,9 @@ urlpatterns = [
                     <h3>Part 1: Create New View </h3>
                     <ul>
                         <li>Create new function <code>price</code> in <code>views.py</code></li>
-                        <li>ex. <code>def price(request, max_price):</code> where <code>max_price</code> is either <code>$</code>, <code>$$</code> or <code>$$$</code></li>
-                        <li>Create a variable <code>restaurants</code> where it filters <code>Restaurant</code> to get restaurants that have prices less than or equal to <code>max_price</code></li>
-                        <li><code>Render</code> to <code>price.html</code></li>
+                        <li>ex. <code>def price(request, max_price):</code> where <code>price</code> is either <code>$</code>, <code>$$</code> or <code>$$$</code></li>
+                        <li>Create a variable <code>restaurants</code> where it filters <code>Restaurant</code> to get restaurants that have prices equal to <code>price</code></li>
+                        <li><code>Render</code> to <code>price_b.html</code></li>
 
                     </ul>
                     <h3>Ask questions!</h3>
@@ -193,8 +193,8 @@ urlpatterns = [
                     <h2>DiningKode URLs</h2>
                     <h3>Part 2 : Template</h3>
                     <ul>
-                        <li>Create a template <code>price.html</code></li>
-                        <li>Look at <code>rating.html</code> for examples.</li>
+                        <li>Create a template <code>price_b.html</code></li>
+                        <li>Look at <code>rating_b.html</code> for examples.</li>
                     </ul>
                     <h3>Ask questions!</h3>
                 </section>
@@ -244,8 +244,8 @@ admin.site.register(Review)</code></pre>
                     <h3>Part 2: Add to Template</h3>
                     <ul>
                         <li>Now our <code>Restaurant</code> has <code>Review</code>s!</li>
-                        <li>You can access <code>Review</code>s that are linked to a <code>Restaurant</code> by <code>restaurant.review</code></li>
-                        <li>In the <code>detail.html</code> template, add <code>restaurant.reviews</code> in a <code>{% for review in restaurant.reviews %}</code> loop</li>
+                        <li>You can access <code>Review</code>s that are linked to a <code>Restaurant</code> by <code>reviews = Review.objects.filter(Restaurant=restaurant)</code></li>
+                        <li>In the <code>detail.html</code> template, add <code>reviews</code> in a <code>{% for review in reviews %}</code> loop and add <code>{{ review.review_text }}</code></li>
                     </ul>
                     <h3>Ask questions!</h3>
                 </section>
