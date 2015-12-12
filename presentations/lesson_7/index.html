@@ -234,7 +234,7 @@ class Review(models.Model):
     restaurant = models.ForeignKey('Restaurant',null=True)
     
     def __str__(self):
-        return u"{}-{}".format(self.author.username, self.restaurant.name)</code></pre>
+        return "{}-{}".format(self.author.username, self.restaurant.name)</code></pre>
                         <li><code>ForeignKey</code>?</li>
                         <li>Add to admin</li>
                         <pre><code>from .models import Restaurant, Review
