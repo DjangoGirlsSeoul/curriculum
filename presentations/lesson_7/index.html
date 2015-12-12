@@ -123,6 +123,10 @@
                         <td class="tg-yw4l">Talk (Jihye) </td>
                       </tr>
                       <tr>
+                        <td class="tg-yw4l">4:15-4:30</td>
+                        <td class="tg-yw4l">Talk (Laura)</td>
+                      </tr>
+                      <tr>
                         <td class="tg-yw4l">4:15-5:45</td>
                         <td class="tg-yw4l">Related Models</td>
                       </tr>
@@ -181,9 +185,9 @@ urlpatterns = [
                     <h3>Part 1: Create New View </h3>
                     <ul>
                         <li>Create new function <code>price</code> in <code>views.py</code></li>
-                        <li>ex. <code>def price(request, max_price):</code> where <code>price</code> is either <code>$</code>, <code>$$</code> or <code>$$$</code></li>
+                        <li>ex. <code>def price(request, price):</code> where <code>price</code> is either <code>$</code>, <code>$$</code> or <code>$$$</code></li>
                         <li>Create a variable <code>restaurants</code> where it filters <code>Restaurant</code> to get restaurants that have prices equal to <code>price</code></li>
-                        <li><code>Render</code> to <code>price_b.html</code></li>
+                        <li><code>Render</code> to <code>price_b.html</code> with <code>restaurants</code> in the context dictionary</li>
 
                     </ul>
                     <h3>Ask questions!</h3>
@@ -244,8 +248,8 @@ admin.site.register(Review)</code></pre>
                     <h3>Part 2: Add to Template</h3>
                     <ul>
                         <li>Now our <code>Restaurant</code> has <code>Review</code>s!</li>
-                        <li>You can access <code>Review</code>s that are linked to a <code>Restaurant</code> by <code>reviews = Review.objects.filter(Restaurant=restaurant)</code></li>
-                        <li>In the <code>detail.html</code> template, add <code>reviews</code> in a <code>{% for review in reviews %}</code> loop and add <code>{{ review.review_text }}</code></li>
+                        <li>You can access <code>Review</code>s that are linked to a <code>Restaurant</code> by <code>reviews = Review.objects.filter(restaurant=restaurant)</code></li>
+                        <li>In the <code>detail.html</code> template, add <code>reviews</code> in a <code>{% for review in reviews %}</code> loop and add <code>{{ review.review_text }}</code> and <code>{{ review.author.username }}</code></li>
                     </ul>
                     <h3>Ask questions!</h3>
                 </section>
