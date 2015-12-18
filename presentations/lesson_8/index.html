@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Django Girls Code Camp Lesson 3</title>
+
+        <meta name="description" content="Django Girls Code Camp Lesson 3">
+        <meta name="author" content="Django Girls Code Camp">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.1.0/css/reveal.min.css">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.1.0/css/theme/league.min.css" id="theme">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.1.0/lib/css/zenburn.min.css">
+        <link rel="stylesheet" href="css/twemoji-awesome.css">
+
+
+        <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <![endif]-->
+
+        <style>
+            section {
+                background: rgba(0,0,0,0.8);
+            }
+            .yellow {
+                color: yellow;
+            }
+            code:not(.python) {
+                color: orange;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section data-background="images/event.png">
+                    <h1>Django Girls Code Camp </h1>
+                    <h3>Lesson 8</h3>
+                    <small>Django Part 4</small>
+                    <h2 style="text-transform: lowercase;">j.mp/dgcc-8</h2>
+                </section>
+
+                <section data-background="images/overview.jpg">
+                <h2>Overview</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Week</th>
+                                <th>Topic</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td >1</td>
+                                <td >Python Part 1</td>
+                            </tr><tr>
+                            </tr><tr>
+                                <td>2</td>
+                                <td>Python Part 2</td>
+                            </tr><tr>
+                            </tr><tr>
+                                <td>3</td>
+                                <td>Python Part 3</td>
+                            </tr><tr>
+                            </tr><tr>
+                                <td>4</td>
+                                <td>Django Part 1</td>
+                            </tr><tr>
+                            </tr><tr>
+                                <td >5</td>
+                                <td>Django Part 2</td>
+                            </tr><tr>
+                            </tr><tr>
+                                <td>6</td>
+                                <td>HTML/CSS and GitHub</td>
+                            </tr><tr>
+                            </tr><tr>
+                                <td>7</td>
+                                <td>Django Part 3</td>
+                            </tr><tr>
+                            </tr><tr>
+                                <td class="yellow">8</td>
+                                <td class="yellow">Django Part 4</td>
+                            </tr><tr>
+                        </tr></tbody>
+                    </table>
+                </section>
+
+                <section data-background="images/notebook.jpg">
+                    <h2>Today's Schedule</h2>
+                    <table class="tg">
+                      <tr>
+                        <th class="tg-yw4l">Time</th>
+                        <th class="tg-yw4l">Content</th>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">1:10-1:30</td>
+                        <td class="tg-yw4l">Overview of the day and announcements</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">1:30-3:45</td>
+                        <td class="tg-yw4l">How to start a Django Project</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">3:45-4:00</td>
+                        <td class="tg-yw4l">Break Time</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">4:00-4:15</td>
+                        <td class="tg-yw4l">Talk (Laura) </td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">4:15-5:45</td>
+                        <td class="tg-yw4l">New Django Project Part 2</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">5:45</td>
+                        <td class="tg-yw4l">Closing remarks</td>
+                      </tr>
+                    </table>
+                </section>
+
+                <section data-background="images/python-programming.jpg">
+                    <h2>Updates!</h2>
+                    <ul>
+                        <li>Reference the Django Girls Tutorial for help</li>
+                        <li><a href="http://tutorial.djangogirls.org">Link here</a></li>
+                    </ul>
+                </section>
+
+                <section data-background="images/pair.jpg">
+                    <h2>Overview</h2>
+                    <ol>
+                        <li>Create new virtualenv and activate</li>
+                        <li><code>pip install django</code></li>
+                        <li><code>django-admin startproject PROJECTNAME</code></li>
+                        <li><code>cd PROJECTNAME</code></li>
+                        <li><code>python manage.py startapp restaurants </code></li>
+                        
+                    </ol>
+                </section>
+
+
+                <section data-background="images/blackpython.png">
+                    <h2><code>startproject?</code></h2>
+                    <code>django-admin startproject mysite</code>
+                    <pre><code>
+mysite/
+    manage.py
+    mysite/
+        __init__.py
+        settings.py
+        urls.py
+        wsgi.py
+                    </code></pre>
+                    <h2>Help your fellow classmates!</h2>
+                </section>
+
+                <section data-background="images/blackpython.png">
+                    <h2><code>python manage.py startapp restaurants</code></h2>
+                    <h3>App</h3>
+                    <pre><code>
+restaurants/
+    __init__.py
+    admin.py
+    migrations/
+        __init__.py
+    models.py
+    tests.py
+    views.py
+                    </code></pre>
+                    <ul>
+                        <li>models.py</li>
+                        <li>admin.py</li>
+                        <li>views.py</li>
+
+                    </ul>
+                    <h3>Ask questions!</h3>
+                </section>
+
+                <section data-background="images/blackpython.png">
+                    <h2>settings.py</h2>
+                    <pre><code>
+INSTALLED_APPS = (
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'restaurants',
+)
+                    </code></pre>
+                    <h3>Ask questions!</h3>
+                </section>
+
+                <section data-background="images/blackpython.png">
+                    <h2>Migrations</h2>
+                    <h3>When you change a model, also make and run migrations</h3>
+                    <pre><code>
+python manage.py makemigrations
+python manage.py migrate
+                    </code></pre>
+                    <ul>
+                        <li>Migrations create changes in your database</li>
+                        <li><code>python manage.py sqlmigrate restaurant 0001</code></li>
+                        <li>Why <code>makemigrations</code> AND <code>migrate</code>?</li>
+                    </ul>
+                </section>
+
+                <section data-background="images/blackpython.png">
+                    <h2>Admin</h2>
+                    <pre><code>
+python manage.py createsuperuser
+                    </code></pre>
+                    <h3>In <code>admin.py</code></h3>
+                    <pre><code>
+from django.contrib import admin
+
+from .models import Restaurant
+
+admin.site.register(Restaurant)
+                    </code></pre>
+                    <ul>
+                        <li><code>python manage.py runserver</code> and check!</li>
+                    </ul>
+                    <h3>Check with a coach before you continue!</h3>
+                </section>
+
+                <section data-background="images/blackpython.png">
+                    <h2>Views</h2>
+                    <pre><code>
+def index(request):
+    return render(request, 'restaurants/index.html', {})
+                    </code></pre>
+                    <ul>
+                        <li>always start with request</li>
+                        <li><code>'restaurants/index.html'</code> - location of template file</li>
+                        <li><code>{}</code> - context dictionary to send to template</li>
+                    </ul>
+                    <h3>Check with a coach before you continue!</h3>
+                </section>
+
+                <section data-background="images/blackpython.png">
+                    <h2>urls</h2>
+                    <ul>
+                        <li>Make <code>urls.py</code> in your app (restaurants) folder</li>
+                        <pre><code>
+from django.conf.urls import url
+
+from . import views
+
+urlpatterns = [
+    url(r'^$', views.index, name='index'),
+]
+                        </code></pre>
+                        <li>In your <code>project</code> folder's <code>urls.py</code></li>
+                        <pre><code>
+from django.conf.urls import include, url
+from django.contrib import admin
+
+urlpatterns = [
+    url(r'^restaurants/', include('restaurants.urls')),
+    url(r'^admin/', include(admin.site.urls)),
+]
+                        </code></pre>
+                    </ul>
+                    <h3>Ask questions!</h3>
+                </section>
+
+                <section data-background="images/blackpython.png">
+                    <h2>Templates</h2>
+                    <ul>
+                        <li>Make <code>templates</code> folder in the app (restaurants) folder</li>
+                        <li>Make <code>app_name</code> (restaurants) folder in <code>templates</code> folder</li>
+                        <li>Make a file <code>index.html</code> in <code>app_name</code> folder</li>
+                        <li><code>mysite/restaurants/templates/restaurants/index.html</code></li>
+                    </ul>
+                    <h3>Ask questions!</h3>
+                </section>
+
+                <section data-background="images/blackpython.png">
+                    <h2>Make your own site</h2>
+                    <ul>
+                        <li>Evernote Clone - Save and view notes and organized into notebooks</li>
+                        <li>Kickstarter Clone - Create kickstarter projects and users can vote for them</li>
+                        <li>Instagram Clone - Upload pictures!</li>
+                    </ul>
+                    <h3>Ask questions!</h3>
+                </section>
+
+
+                <section data-background="images/python.png">
+                    <h1> Goals </h1>
+                    <ul>
+                        <ol>Have fun!</ol>
+                        <ol>Code along!</ol>
+                        <ol>Find people nearby that you can meet up with during the week</ol>
+                        <ol>ASK QUESTIONS!</ol>
+                    </ul>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="https://cdn.bootcss.com/reveal.js/3.1.0/lib/js/head.min.js"></script>
+        <script src="https://cdn.bootcss.com/reveal.js/3.1.0/js/reveal.min.js"></script>
+
+        <script>
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                transition: 'fade', // none/fade/slide/convex/concave/zoom
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'https://cdn.bootcss.com/reveal.js/3.1.0/lib/js/classList.min.js', condition: function() { return !document.body.classList; } },
+                    { src: 'https://cdn.bootcss.com/reveal.js/3.1.0/plugin/highlight/highlight.min.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+                ]
+            });
+        </script>
+
+    </body>
+</html>
