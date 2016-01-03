@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Django Girls Code Cam</title>
+
+        <meta name="description" content="Django Girls Winter Code Camp">
+        <meta name="author" content="Django Girls Code Camp">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.1.0/css/reveal.min.css">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.1.0/css/theme/league.min.css" id="theme">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.1.0/lib/css/zenburn.min.css">
+        <link rel="stylesheet" href="css/twemoji-awesome.css">
+
+
+        <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <![endif]-->
+
+        <style>
+            section {
+                background: rgba(0,0,0,0.8);
+            }
+            .yellow {
+                color: yellow;
+            }
+            code:not(.python) {
+                color: orange;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section data-background="images/event.png">
+                    <h1>Django Girls Winter Code Camp </h1>
+                    <h3>Week 1</h3>
+                    <h2 style="text-transform: lowercase;">j.mp/dgwcc-1</h2>
+                </section>
+
+                <section data-background="images/notebook.jpg">
+                    <h2>Today's Schedule</h2>
+                    <table class="tg">
+                      <tr>
+                        <th class="tg-yw4l">Time</th>
+                        <th class="tg-yw4l">Content</th>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">1:10-1:15</td>
+                        <td class="tg-yw4l">Overview of the day and announcements</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">1:15-2:00</td>
+                        <td class="tg-yw4l">Lecture</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">2:00-4:00</td>
+                        <td class="tg-yw4l">Self Project</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-yw4l">4:00 - 4:30 </td>
+                        <td class="tg-yw4l">Presentation</td>
+                      </tr>
+                    </table>
+                </section>
+
+        </div>
+
+        <script src="https://cdn.bootcss.com/reveal.js/3.1.0/lib/js/head.min.js"></script>
+        <script src="https://cdn.bootcss.com/reveal.js/3.1.0/js/reveal.min.js"></script>
+
+        <script>
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                transition: 'fade', // none/fade/slide/convex/concave/zoom
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'https://cdn.bootcss.com/reveal.js/3.1.0/lib/js/classList.min.js', condition: function() { return !document.body.classList; } },
+                    { src: 'https://cdn.bootcss.com/reveal.js/3.1.0/plugin/highlight/highlight.min.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+                ]
+            });
+        </script>
+
+    </body>
+</html>
